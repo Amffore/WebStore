@@ -1,18 +1,4 @@
-@model IEnumerable<WebStoreProject.Models.Product>
 
-<h3>Смартфоны</h3>
-<table>
-    <tr>
-        <td>Модель</td>
-        <td>Описание</td>
-        <td>Цена</td>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.ProductName</td>
-            <td>@item.Description</td>
-            <td>@item.Price</td>
-        </tr>
-    }
-</table>
+
+<h3>Главная</h3>
+<a asp-controller="Product" asp-action="Index">Список смартфонов</a>

@@ -1,0 +1,17 @@
+@model WebStoreProject.Models.Product
+
+<h1>Создать товар</h1>
+<a asp-controller="Product" asp-action="Index">Вернуться к списку</a>
+
+<form asp-action="Create" asp-controller="Product">
+    <label asp-for="ProductName">Название: </label>
+    <input type="text" asp-for="ProductName" />
+    <br/>
+    <label asp-for="Description">Описание</label>
+    <input asp-for="Description" type="text"/>
+    <br/>
+    <label asp-for="Price">Цена</label>
+    <input asp-for="Price" type="text"/>
+    <br>
+    <input type="submit" value="Добавить" />
+</form>
