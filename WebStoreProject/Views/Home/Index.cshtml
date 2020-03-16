@@ -1,1 +1,18 @@
-<h1>Hello, World!</h1>
+@model IEnumerable<WebStoreProject.Models.Product>
+
+<h3>Смартфоны</h3>
+<table>
+    <tr>
+        <td>Модель</td>
+        <td>Описание</td>
+        <td>Цена</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
