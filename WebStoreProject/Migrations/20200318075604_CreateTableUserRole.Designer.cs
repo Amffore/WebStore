@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebStoreProject.Data;
 
 namespace WebStoreProject.Migrations
 {
     [DbContext(typeof(StoreDataContext))]
-    partial class StoreDataContextModelSnapshot : ModelSnapshot
+    [Migration("20200318075604_CreateTableUserRole")]
+    partial class CreateTableUserRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,7 +79,7 @@ namespace WebStoreProject.Migrations
 
             modelBuilder.Entity("WebStoreProject.Models.User", b =>
                 {
-                    b.HasOne("WebStoreProject.Models.Role", "Role")
+                    b.HasOne("WebStoreProject.Models.Role", null)
                         .WithMany("Users")
                         .HasForeignKey("RoleId");
                 });

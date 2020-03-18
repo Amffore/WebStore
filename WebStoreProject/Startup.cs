@@ -41,6 +41,9 @@ namespace WebStoreProject
             app.UseRouting();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -1,0 +1,20 @@
+
+
+@{
+    Layout = "_LoginPage";
+}
+
+<div class="container center_div">
+<form class="form-horizontal" asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div class="form-group">
+        <label>Логин</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Пароль</label>
+        <input type="password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+</div>
